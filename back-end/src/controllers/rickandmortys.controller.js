@@ -28,14 +28,10 @@ const findByIdrickandmortycontroller = async (req, res) => {
   res.send(chosenrickandmortys);
 };
 
-const modelNamerickandmortycontroller = async (req, res) => {
-  const name = req.params.name;
+const findsearchrickandrickandmortycontroller = async (req, res) => {
+  const name = req.query.name;
 
-  if (!mongoose.Types.Map.isValid(name)) {
-    return res.status(400).send({ message: 'Nome inválido!' });
-  }
-
-  const characterickandmortys = await rickandmortysservice.modelNamerickandmortyservice(name);
+  const characterickandmortys = await rickandmortysservice.findsearchrickandrickandmortyservice(name);
 
   if (!characterickandmortys) {
     return res.status(404).send({ message: 'Personagem não encontrado!' });
@@ -91,20 +87,6 @@ const deleterickandmortyscontroller = async (req, res) => {
   res.send({ message: 'Personagem deletado com sucesso!' });
 };
 
-// const findAllUsersController = async (req, res) => {
-//   const allusers = await rickandmortysservice.findAllUsersService();
-//   if (allusers.length == 0) {
-//     return res.status(404).send({ message: 'Não existe nenhum usuário cadastrado na base de dados! ',});
-//   }
-
-//   res.send(allusers);
-// };
-
-// const createUsersController = async (req, res) => {
-//   const users = req.body;
-//   const newUsers = await rickandmortysservice.createUsersService(users);
-//   res.status(201).send(newUsers);
-// };
 
 module.exports = {
   findALLrickandmortyscontroller,
@@ -112,7 +94,5 @@ module.exports = {
   createrickandmortyscontroller,
   updaterickandmortyscontroller,
   deleterickandmortyscontroller,
-  modelNamerickandmortycontroller,
-  // findAllUsersController,
-  // createUsersController,
+  findsearchrickandrickandmortycontroller,
 };
