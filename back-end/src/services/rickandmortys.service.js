@@ -1,5 +1,4 @@
 const Rickandmortys = require('../model/rickandmortys')
-const users = require('../model/rickandmortys')
 
 const findALLrickandmortysservice = async () => {
   const rickandmortys = await Rickandmortys.find();
@@ -12,7 +11,7 @@ const findByIdrickandmortyservice = async (idParam) => {
 };
 
 const findsearchrickandmortyservice = async (name) => {
-  const rickandmortys = await Rickandmortys.findOne({ name: name })
+  const rickandmortys = await Rickandmortys.find({name: name})
   return rickandmortys;
 };
 
