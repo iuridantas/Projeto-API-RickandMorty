@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const routes = require('./characters/rickandmortys.routes');
@@ -6,7 +6,7 @@ const routesUsers = require('./users/users.routes');
 const authroute = require('./auth/auth.routes');
 const connecttodatabase = require('./database/database');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 const app = express();
 
 connecttodatabase();

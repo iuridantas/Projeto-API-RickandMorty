@@ -5,6 +5,6 @@ const rickandmortysSchema = new mongooose.Schema({
   image: { type: String, required: true },
 });
 
-const rickandmortys = mongooose.model('rickandmortys',rickandmortysSchema);
+const rickandmortys = mongooose.model('rickandmortys', rickandmortysSchema);
 
 module.exports = rickandmortys;
