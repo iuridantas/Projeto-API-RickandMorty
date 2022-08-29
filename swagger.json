@@ -34,11 +34,11 @@
               "examples": {
                 "Users": {
                   "value": {
-                    "nome": "Iuri",
+                    "nome": "Iuri Dantas",
                     "usuario": "IuriDantas",
                     "email": "uri.dantas@hotmail.com",
                     "password": "blueedtech",
-                    "image": "https://avatars.githubusercontent.com/u/88010013?v=4"
+                    "foto": "https://avatars.githubusercontent.com/u/88010013?v=4"
                   }
                 }
               }
