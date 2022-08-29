@@ -11,11 +11,11 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000/rickandmortys",
+      "url": "http://localhost:3000",
       "description": "API de teste"
     },
     {
-      "url": "https://api-rickandmortys.herokuapp.com/rickandmortys",
+      "url": "https://api-rickandmortys.herokuapp.com",
       "description": "API de produção"
     }
   ],
@@ -38,7 +38,7 @@
                     "usuario": "IuriDantas",
                     "email": "uri.dantas@hotmail.com",
                     "password": "blueedtech",
-                    "image": "foto"
+                    "image": "https://avatars.githubusercontent.com/u/88010013?v=4"
                   }
                 }
               }

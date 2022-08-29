@@ -11,7 +11,7 @@ const findByIdrickandmortyservice = async (idParam) => {
 };
 
 const findsearchrickandmortyservice = async (name) => {
-  const rickandmortys = await Rickandmortys.find({name: name})
+  const rickandmortys = await Rickandmortys.findOne({name: name})
   return rickandmortys;
 };
 

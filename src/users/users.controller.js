@@ -1,5 +1,6 @@
 const { default: mongoose } = require('mongoose');
 const userssservice = require('./users.service');
+const authService = require('../auth/auth.service')
 const mongooose = require('mongoose');
 
 
@@ -36,7 +37,19 @@ const createUsersController = async (req, res) => {
   });
   }
 
-  res.status(201).send(user);
+  const token = authService.generateToken(user.id);
+
+  res.status(201).send({
+    user:{
+      id: user.id,
+      nome,
+      usuario,
+      email,
+      password,
+      foto,
+    },
+    token,
+  });
 };
 
 module.exports = {

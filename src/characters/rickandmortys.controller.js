@@ -27,7 +27,7 @@ const findByIdrickandmortycontroller = async (req, res) => {
 const findsearchrickandrickandmortycontroller = async (req, res) => {
   const name = req.query.name;
 
-  const characterickandmortys = await rickandmortysservice.findsearchrickandrickandmortyservice(name);
+  const characterickandmortys = await rickandmortysservice.findsearchrickandmortyservice(name);
 
   if (!characterickandmortys) {
     return res.status(404).send({ message: 'Personagem não encontrado!' });
