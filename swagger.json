@@ -65,6 +65,11 @@
     },
     "/users": {
       "get": {
+        "security": [
+          {
+             "bearerAuth": []
+          }
+       ],
         "summary": "Lista de todos os usuários",
         "description": "Rota responsável por listar todos os usuários",
         "tags": ["User"],
@@ -142,6 +147,11 @@
     },
     "/characters": {
       "get": {
+        "security": [
+          {
+             "bearerAuth": []
+          }
+       ],
         "summary": "Lista de todos os personagens",
         "description": "Rota responsável por listar todos os personagens",
         "tags": ["Characters"],
@@ -167,6 +177,11 @@
     },
     "/characters/find/{id}": {
       "get": {
+        "security": [
+          {
+             "bearerAuth": []
+          }
+       ],
         "summary": "Busca um personagem pelo ID",
         "description": "Rota responsável por buscar um personagem pelo ID",
         "tags": ["Characters"],
@@ -198,6 +213,11 @@
     },
     "/characters/create": {
       "post": {
+        "security": [
+          {
+             "bearerAuth": []
+          }
+       ],
         "summary": "Cadastrar uma personagem",
         "description": "Rota responsável por cadastrar um personagem",
         "tags": ["Characters"],
@@ -238,6 +258,11 @@
     },
     "/characters/update/{id}": {
       "put": {
+        "security": [
+          {
+             "bearerAuth": []
+          }
+       ],
         "summary": "Editar um personagem pelo ID",
         "description": "Rota responsável por editar um personagem pelo ID",
         "tags": ["Characters"],
@@ -286,6 +311,11 @@
     },
     "/characters/delete/{id}": {
       "delete": {
+        "security": [
+          {
+             "bearerAuth": []
+          }
+       ],
         "summary": "Apagar um personagem pelo ID",
         "description": "Rota responsável por apagar um personagem pelo ID",
         "tags": ["Characters"],
@@ -309,6 +339,11 @@
     },
     "/characters/search": {
       "get": {
+        "security": [
+          {
+             "bearerAuth": []
+          }
+       ],
         "summary": "Busca um personagem pelo nome",
         "description": "Rota responsável por buscar um personagem pelo nome",
         "tags": ["Characters"],
@@ -348,6 +383,13 @@
     }
   },
   "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
     "schemas": {
       "Rickandmortys": {
         "type": "object",
