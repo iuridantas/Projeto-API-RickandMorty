@@ -10,7 +10,7 @@ const validId = (req, res, next) => {
 
 const validobjectBody = (req, res, next) => {
   const rickandmortys = req.body;
-  if (!rickandmortys || !rickandmortys.name || !rickandmortys.foto) {
+  if (!rickandmortys || !rickandmortys.name || !rickandmortys.imageUrl) {
     return res.status(400).send({ message: 'Envie os dados completo!' });
   }
   next();

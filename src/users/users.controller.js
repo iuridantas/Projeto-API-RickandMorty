@@ -16,14 +16,14 @@ const findAllUsersController = async (req, res) => {
 };
 
 const createUsersController = async (req, res) => {
-  const { nome, usuario, email, password, foto } = req.body;
+  const { name, username, email, password, photo } = req.body;
 
-  if (!nome || !usuario || !email || !password || !foto) {
+  if (!name || !username || !email || !password || !photo) {
     return res
       .status(400)
       .send({
         message:
-          "Alguns campos estão faltando. Os campos são: 'nome', 'usuario', 'email', 'password', 'foto' .",
+          "Alguns campos estão faltando. Os campos são: 'name', 'username', 'email', 'password', 'photo' .",
       });
   }
 
@@ -46,11 +46,11 @@ const createUsersController = async (req, res) => {
   res.status(201).send({
     user: {
       id: user.id,
-      nome,
-      usuario,
+      name,
+      username,
       email,
       password,
-      foto,
+      photo,
     },
     token,
   });

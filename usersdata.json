@@ -1,9 +1,9 @@
 [
     {
-      "nome": "Iuri Dantas",
-      "usuario": "IuriDantas",
+      "name": "Iuri Dantas",
+      "username": "IuriDantas",
       "email": "uri.dantas@hotmail.com",
-      "password": "blueed",
-      "image": "foto"
+      "password": "blueedtch",
+      "photo": "foto"
     }
   ]
