@@ -6,7 +6,7 @@ const findALLrickandmortysservice = async () => {
 };
 
 const findByIdrickandmortyservice = async (idParam) => {
-  const rickandmortys = await Rickandmortys.findById(idParam);
+  const rickandmortys = await Rickandmortys.find({_id: idParam});
   return rickandmortys;
 };
 
